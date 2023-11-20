@@ -5,6 +5,20 @@ export class Game {
     }
     
     init(field){
+        const keys = {
+            "p":1,
+            ".":1,
+            "#":1
+        }
+        if(!field[1]) throw new Error("invalid input")
+        if(field[0][0] != (field.length - 1) || field[0][2] != field[1].length){
+            throw new Error("invalid input")
+        }
+        for(const row of field.slice(1)){
+            for(const element of row){
+                if(!keys[element]) throw new Error("invalid input")
+            }
+        }
         this.field = field
     }
 
