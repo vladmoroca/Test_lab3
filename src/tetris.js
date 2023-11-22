@@ -28,6 +28,10 @@ export class Game {
         }
     }
 
+    getField() {
+        return this.field
+    }
+
     /*. 
     . порожній піксель
     p - піксель “підвішеної” фігури

@@ -15,5 +15,6 @@ export class fileSystem{
     writeOutput(data){
         data = data.map((row) => row.join("")).join("\n") + "\n";
         console.log(data)
+        return data
     }
 }

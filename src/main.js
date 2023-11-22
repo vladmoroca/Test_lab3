@@ -8,6 +8,6 @@ export class Main{
       const data = this.fs.parse(this.fs.readArgs())
       this.game.init(data)
       this.game.run()
-      this.fs.writeOutput(this.game.field)
+      return this.fs.writeOutput(this.game.getField())
     }
 }
